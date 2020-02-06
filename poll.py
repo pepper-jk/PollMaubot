@@ -31,7 +31,7 @@ class Poll:
         self.active = True  # Begins the poll
         self.total = 0
 
-        self.emojis = random.sample(REACTIONS, len(choices)) # Select a random assortment of emojis
+        self.emojis = REACTIONS[0:len(choices)] # Select a random assortment of emojis
 
     def vote(self, choice, user_id):
         # Adds a vote to the given choice
